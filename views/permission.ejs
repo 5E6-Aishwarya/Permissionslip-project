@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />   
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+            
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+            
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Permission</title>
+        <style>
+            body{
+                background-image: url(https://thumbs.dreamstime.com/z/cyber-security-information-network-protection-future-technology-web-business-background-concept-modern-safety-digital-lock-189689602.jpg);
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position: center; 
+            }
+            h1{
+                padding-top: 1%;
+                padding-left: 2.5%;
+                padding-bottom: 1%;
+                font-size: 35px;
+                color: white;
+            }
+            h3{
+                color: white;
+                font-weight: bold;
+                font-size: 20px
+            }
+            .c1{
+                font-size: 13px;
+                font-weight: bold;
+                background-color:white;  
+                margin-right: 73%; 
+                margin-bottom: 1%;
+                margin-left: 1%;
+                padding-left: 1%; 
+                border-width:2px;
+                border-style:solid;
+                border-color:black;
+
+            }
+            .c2{
+                background-color: black;
+                padding-left: 5%;
+            }
+            .button {
+                background-color:rgb(187, 185, 185);
+                border: none;
+                border-radius: 5%;
+                color: black;
+                padding: 1% 2%;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-weight: bold;
+                margin: 1% 2%;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; 
+                transition-duration: 0.4s;
+            }
+            .button2:hover {
+                box-shadow: 0 1% 1% 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="c2">
+        <h1>BVRIT HYDERABAD COLLEGE OF ENGINEERING FOR WOMEN</h1></div>
+        <h3>
+            <% console.log(data) %>
+            Welcome <%= data.name %>!
+        </h3>
+        <div class="c1">
+        <form method="get" action = '/requestSubmit'>
+            <input type = "text" name = "rollno" id = "rno"  value = <%= data.rno%> hidden readonly><br><br>
+            Time : <%= data.time%> <br>
+            Date : <%= data.date%> <br>
+            <input type = "text" name = "time" value = <%= data.time %> hidden readonly>
+            <input type = "text" name = "date" value = <%= data.date %> hidden readonly>
+            Attendance : 
+            <input type = "number" name = "attendance" id = "attendance" required><br><br>
+            Reason:<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <textarea rows="20" cols="30" name = "Reason" value = "rea" placeholder="Enter your reason" required></textarea><br><br>
+            <!--<input type = "submit" value = "Submit" required>-->
+            <button class="button button2">Submit</button> <br><br>
+        </form>
+    </div>
+    </body>
+</html>
