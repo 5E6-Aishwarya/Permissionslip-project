@@ -17,7 +17,7 @@
     "request": "^2.88.2",
     "vercel": "^31.2.2"
   },
-  "name": "permissionslip_project",
+  "name": "permissionslip-project",
   "version": "1.0.0",
   "description": "Permission Slip project for BVRITH",
   "main": "index.js",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5E6-Aishwarya/Permissionslip_project.git"
+    "url": "git+https://github.com/5E6-Aishwarya/Permissionslip-project.git"
   },
   "keywords": [
     "node",
@@ -36,7 +36,7 @@
   "author": "Gopisetti Sri Aishwarya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/5E6-Aishwarya/Permissionslip_project/issues"
+    "url": "https://github.com/5E6-Aishwarya/Permissionslip-project/issues"
   },
-  "homepage": "https://github.com/5E6-Aishwarya/Permissionslip_project#readme"
+  "homepage": "https://github.com/5E6-Aishwarya/Permissionslip-project#readme"
 }
