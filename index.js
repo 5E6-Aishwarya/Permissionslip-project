@@ -359,7 +359,7 @@ app.get('/hodSubmit',function(req,res){
                 password:req.query.pwd
             });
         });
-        res.render("FacultyLogin.ejs",{});
+        res.render("FacultyLogin",{});
     })
 });
 
@@ -508,7 +508,7 @@ app.get('/status',function(req,res){
                     stu = {rno : doc1.data().rollno,name : doc1.data().name,pwd:req.query.pwd};
                 });
                 if(flag1){
-                    res.render("Student_dashboard.ejs",{data:stu});
+                    res.render("Student_dashboard",{data:stu});
                 }
             });
         }
