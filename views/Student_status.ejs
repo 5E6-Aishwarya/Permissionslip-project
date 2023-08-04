@@ -59,9 +59,21 @@
         <div>
             <form action = '/dashboard' method = "get">
             <input type = "text" name = "rollno" value = <%= data.rollno %> hidden readonly>
+            <input type = "password" name = "pwd" value = <%= data.pwd %> hidden readonly>
             <br><br>
             <button class="class1 btn btn-light">Click here to go back</button>
             </form>
         </div>
     </body>
 </html>
+<!--<html>
+    <head>
+        <title>Status</title>
+    </head>
+    <body>
+        <h2>Hi <%=data.rollno%></h2>
+        Permission Request<br>
+        Date : <%= data.date%> <br><br>
+        Status : <%= data.status %><br>
+    </body>
+</html>-->
