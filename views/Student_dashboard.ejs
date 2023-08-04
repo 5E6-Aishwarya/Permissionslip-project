@@ -118,12 +118,14 @@
         <h4>Hi <%= data.name %>!</h4>
                 <form method = 'get' action = '/status'>
                     <input type = 'text' id = 'rno' name = 'rolno' value = <%= data.rno %> hidden readonly>
+                    <input type ="password" id = 'pd' name = 'pwd' value = <%= data.pwd %> hidden readonly><br>
                     <!--<input type="submit" value="Status"><br><br>-->
                     <!--<button class="class1 btn btn-light">Status</button>-->
                     <button class="button"><span>Status </span></button>
                 </form>
                 <form method = 'get' action = '/loginstudent'>
                     <input type = 'text' id = 'rno' name = 'rolno' value = <%= data.rno %> hidden readonly>
+                    <input type ="password" id = 'pd' name = 'pwd' value = <%= data.pwd %> hidden readonly><br>
                     <button class="button"><span>Permission Request</span></button>
                     <!--<input type="submit" value="Permission Request"><br><br>-->
                 </form>
@@ -131,3 +133,21 @@
     
     </body>
 </html>
+<!--<html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <h1 align = center>BVRIT HYDERABAD College of Engineering for Women</h1>
+        <h2>Student_Dashboard</h2>
+        <p style="font-size: 70%;">Hi <%= data.name %>!</p>
+        <form method = 'get' action = '/status'>
+            <input type = 'text' id = 'rno' name = 'rolno' value = <%= data.rno %> hidden readonly>
+            <input type="submit" value="Status"><br><br>
+        </form>
+        <form method = 'get' action = '/loginstudent'>
+            <input type = 'text' id = 'rno' name = 'rolno' value = <%= data.rno %> hidden readonly>
+            <input type="submit" value="Permission Request"><br><br>
+        </form>
+    </body>
+</html>-->
