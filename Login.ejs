@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />   
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+            
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+            
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Student login</title>
+        <style>
+            body{
+                background-image: url(https://cdn.elearningindustry.com/wp-content/uploads/2022/07/shutterstock_1185117667.jpg);
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position: center; 
+            }
+                h1{
+                    padding-top: 3%;
+                    padding-left: 6%;
+                    font-size: 50px;
+                    font-style: italic;
+                }
+                h2{
+                    padding-left: 2%;
+                    font-size: 45px;
+                    font-style: italic;
+                }
+                h4{
+                    padding-top: 3%;
+                    padding-left: 6%;
+                    font-size: 35px;
+                    font-style: italic;
+                }
+                .class1{
+                    margin-top: 3%;
+                    margin-left: 6%;
+                    font-size: 30px;
+                    font-style: italic;
+        
+                }
+                input[type=submit] {
+                    width: 5%;  height: 4%;
+                    font-size: 18px;
+                    font-style: italic;
+                }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>BVRIT HYDERABAD </h1>
+        <h2>College of Engineering for Women</h2>
+        <h4>Student Login</h4>
+        <div class="class1">
+        <form method = "get" action = '/dashboard'>
+            <b>Roll No:</b>
+            <input type = "text" name = "rollno" id = "rono" style="height: 4%;" placeholder="Capitals only" required><br>
+            <b>Password :</b>
+            <input type = "password" name = "pwd" style="height: 4%;" required><br>
+            <!-- <input type = "submit" value = "Submit" required> -->
+            <button class="btn btn-light">Submit</button>
+        </form>
+        <form method = "get" action = '/regstudent'>
+            <button class="btn btn-light">Register</button>
+        </form>
+    </div>
+    </body>
+</html>
+<!--<html>
+    <head><title>Student login</title></head>
+    <body>
+        <h1 align = center>BVRIT HYDERABAD College of Engineering for Women</h1>
+        <h2>Login</h2>
+        <form method = "get" action = '/dashboard'>
+            Roll No:
+            <input type = "text" name = "rollno" id = "rono">
+            <input type = "submit" value = "Submit">
+        </form>
+    </body>
+</html>-->
