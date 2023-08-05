@@ -20,8 +20,8 @@
 var express = require("express");  
 var app = express();  
 
-app.set('views', path.join(__dirname, 'views'));
 app.set("view engine","ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 const { initializeApp, cert } = require("firebase-admin/app");
 const { getFirestore} = require("firebase-admin/firestore");
