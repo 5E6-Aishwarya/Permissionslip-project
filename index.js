@@ -369,7 +369,7 @@ app.get('/StudentSubmit',function(req,res){
     var formatted = dt.format('Y-m-d H:M:S');
     if(((Number(req.query.rolno.slice(0,2)) > Number(formatted.slice(2,4))) && (Number(req.query.rolno.slice(0,2)) < (Number(formatted.slice(2,4)) - 3))) || (req.query.rolno.slice(2,4) != "WH")){
         alert("Enter the details correctly");
-        res.render("Studentregister",{});
+        res.render("StudentRegister",{});
     }
     else{
         db.collection("students_data")
