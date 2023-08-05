@@ -54,11 +54,11 @@ let alert = require("alert");
 
 
 app.get("/",function (req,res){
-    res.render("Homepage.ejs",{});
+    res.render("Homepage",{});
 });
 
 app.get("/student-data",function (req,res){
-    res.render("students_data.ejs",{});
+    res.render("students_data",{});
 });
 
 app.get("/dataSubmit", function (req,res) {
@@ -71,25 +71,25 @@ app.get("/dataSubmit", function (req,res) {
         .then(() =>
         {
         alert("data sent successfully");
-        res.render("students_data.ejs",{});
+        res.render("students_data",{});
         })
 });
 
 app.get('/fachodlog',function(req,res){
-    res.render("FacultyLogin.ejs",{});
+    res.render("FacultyLogin",{});
 });
 
 app.get('/regstudent',function(req,res){
-    res.render("StudentRegister.ejs",{});
+    res.render("StudentRegister",{});
 });
 
 app.get('/fachodreg',function(req,res){
-    res.render("FACHODREG.ejs",{});
+    res.render("FACHODREG",{});
 });
 
 app.get('/updateinformation',function(req,res){
     let fdet = {email : req.query.email,password:req.query.pwd,name:req.query.name};
-    res.render("FacultyUpdateStudent.ejs",{data:fdet});
+    res.render("FacultyUpdateStudent",{data:fdet});
 });
 
 app.get('/addstudentdata',function(req,res){
@@ -113,11 +113,11 @@ app.get('/addstudentdata',function(req,res){
                     console.error(e);
                  });
                  alert("Student added successfully");
-                 res.render("FacultyDashboard.ejs",{data:fac});
+                 res.render("FacultyDashboard",{data:fac});
             }
             else{
                 alert("Student already present");
-                res.render("FacultyDashboard.ejs",{data:fac});
+                res.render("FacultyDashboard",{data:fac});
             }
         });
     });
@@ -130,7 +130,7 @@ app.get('/updatestudentinfo',function(req,res){
             db.collection("students_data").doc(doc.id).update({type : req.query.type});
         });
         alert("Updates made successfully");
-        res.render("FacultyDashboard.ejs",{data:fac});
+        res.render("FacultyDashboard",{data:fac});
     });
 });
 
@@ -187,11 +187,11 @@ app.get('/facultylog',function(req,res){
                     } 
                 });
                 if(student_req.length != 0){
-                    res.render("FacultyRequests.ejs",{data:student_req,fac:fac});
+                    res.render("FacultyRequests",{data:student_req,fac:fac});
                 }
                 else{
                     alert("No new request found");
-                    res.render("FacultyLogin.ejs",{});
+                    res.render("FacultyLogin",{});
                 }
             });
         });
@@ -217,17 +217,17 @@ app.get('/facultylog',function(req,res){
                             }
                         });
                         if(student_req.length != 0){
-                            res.render("FacultyRequests.ejs",{data:student_req,fac:fac});
+                            res.render("FacultyRequests",{data:student_req,fac:fac});
                         }
                         else{
                             alert("No new requests found");
-                            res.render("FacultyLogin.ejs",{});
+                            res.render("FacultyLogin",{});
                         }
                     });
                 });
                 if(!flag){
                     alert("Invalid Credentials");
-                    res.render("FacultyLogin.ejs",{});
+                    res.render("FacultyLogin",{});
                 }
             });
         }
@@ -295,11 +295,11 @@ app.get('/response',function(req,res){
                         } 
                     });
                     if(student_req.length != 0){
-                        res.render("FacultyRequests.ejs",{data:student_req,fac:fac});
+                        res.render("FacultyRequests",{data:student_req,fac:fac});
                     }
                     else{
                         alert("No new requests found");
-                        res.render("FacultyLogin.ejs",{})
+                        res.render("FacultyLogin",{})
                     }
                 });
             });
@@ -320,11 +320,11 @@ app.get('/response',function(req,res){
                             }
                         });
                         if(flag){
-                            res.render("FacultyRequests.ejs",{data:student_req,fac:fac});
+                            res.render("FacultyRequests",{data:student_req,fac:fac});
                         }
                         else{
                             alert("No new requests found");
-                            res.render("FacultyLogin.ejs",{});
+                            res.render("FacultyLogin",{});
                         }
                     });
                 });
@@ -346,7 +346,7 @@ app.get('/facultySubmit',function(req,res){
     })
     .then(() => {
         alert("Faculty registered Succcessfully");
-        res.render("FacultyLogin.ejs",{});
+        res.render("FacultyLogin",{});
     })
 });
 
@@ -369,7 +369,7 @@ app.get('/StudentSubmit',function(req,res){
     var formatted = dt.format('Y-m-d H:M:S');
     if(((Number(req.query.rolno.slice(0,2)) > Number(formatted.slice(2,4))) && (Number(req.query.rolno.slice(0,2)) < (Number(formatted.slice(2,4)) - 3))) || (req.query.rolno.slice(2,4) != "WH")){
         alert("Enter the details correctly");
-        res.render("Studentregister.ejs",{});
+        res.render("Studentregister",{});
     }
     else{
         db.collection("students_data")
@@ -383,13 +383,13 @@ app.get('/StudentSubmit',function(req,res){
             .then(() =>
             {
                 alert("data sent successfully");
-                res.render("Login.ejs",{});
+                res.render("Login",{});
             })
     }
 });
 
 app.get('/login',function(req,res){
-    res.render("Login.ejs",{});
+    res.render("Login",{});
 })
 
 app.get('/dashboard',function(req,res){
@@ -422,15 +422,15 @@ app.get('/dashboard',function(req,res){
             }
             else{
                 alert("Hostelers not allowed");
-                res.render("Login.ejs",{});
+                res.render("Login",{});
             }
         });   
         if(flag){
-            res.render("Student_dashboard.ejs",{data:student}); 
+            res.render("Student_dashboard",{data:student}); 
         }
         else{
             alert("Invalid Credentiasls");
-            res.render("Login.ejs",{});
+            res.render("Login",{});
         }
     });
 })
@@ -443,7 +443,7 @@ app.get('/loginstudent',function(req,res){
                 var dt = dateTime.create();
                 var formatted = dt.format('Y-m-d H:M:S');
                 student = {rno : doc.data().rollno,name : doc.data().name,time : formatted.slice(11,formatted.length),date : formatted.slice(0,10),pwd:doc.data().password};
-                res.render('permission.ejs',{data:student});
+                res.render('permission',{data:student});
             }
         });
     })
@@ -477,12 +477,12 @@ app.get('/requestSubmit',function(req,res){
                     status : "Pending"
                 }).then(()=>{
                     alert("Request sent successfully");
-                    res.render("Student_dashboard.ejs",{data:student});
+                    res.render("Student_dashboard",{data:student});
                 });
             }
             else{
                 alert('Permission for today already sent');
-                res.render("Student_dashboard.ejs",{data:student});
+                res.render("Student_dashboard",{data:student});
             }
         });
     });
@@ -514,7 +514,7 @@ app.get('/status',function(req,res){
             });
         }
         else{
-            res.render("Student_status.ejs",{data:Req});
+            res.render("Student_status",{data:Req});
         }
     });
 });
