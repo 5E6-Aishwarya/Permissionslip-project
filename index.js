@@ -377,7 +377,7 @@ app.get('/StudentSubmit',function(req,res){
                 rollno : req.query.rolno,
                 name : req.query.stuname,
                 type : req.query.type,
-                section : req.query.section,
+                section : req.query.sel,
                 password : req.query.pwd
             })
             .then(() =>
